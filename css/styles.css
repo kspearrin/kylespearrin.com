@@ -1,0 +1,34 @@
+body {
+    padding-top: 50px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    background-image: url('../images/light_wool.png');
+    background-size: 190px 191px;
+}
+
+#header {
+    text-align: center;
+}
+
+h1.title {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 60px;
+    color: #09304e;
+}
+
+h1.title, #description, #social {
+    margin-bottom: 30px;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx)
+{
+    body {
+        background-image: url('../images/light_wool__2x.png');
+    }
+}
+
