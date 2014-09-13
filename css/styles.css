@@ -12,12 +12,16 @@ body {
 
 h1.title {
     font-family: 'Shadows Into Light', cursive;
-    font-size: 35px;
+    font-size: 40px;
     color: #1b6197;
     margin: 0 0 20px;
 }
 
-#description, #social {
+#description {
+    margin-bottom: 20px;
+}
+
+#social {
     margin-bottom: 30px;
 }
 
