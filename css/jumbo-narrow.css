@@ -2,6 +2,8 @@
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+      background-image: url('../images/light_wool.png');
+    background-size: 190px 191px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
