@@ -71,9 +71,14 @@
             &copy; <script>document.write(new Date().getFullYear());</script>, Kyle Spearrin
         </footer>
     </div>
+    
     <script>
-        if(window.location.search === "?emailed=true") {
+        if(location.search === "?emailed=true") {
             document.getElementById("email-success").style.display = "block";
+            
+            if (history.replaceState) {
+                history.replaceState({}, '', location.pathname);
+            }
         }
     
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
