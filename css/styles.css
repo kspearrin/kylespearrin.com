@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-h1.title {
+#title {
     font-family: 'Shadows Into Light', cursive;
     font-size: 40px;
     color: #1b6197;
@@ -25,9 +25,17 @@ h1.title {
     margin-bottom: 30px;
 }
 
+#email-success {
+    display: none;
+}
+
 footer {
     margin-top: 30px;
     text-align: center;
+}
+
+textarea.form-control {
+    height: 200px;
 }
 
 /* tablet portait and up */
@@ -36,7 +44,7 @@ footer {
         padding-top: 50px;
     }
     
-    h1.title {
+    #title {
         font-size: 60px;
     }
 }
