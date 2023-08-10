@@ -14,6 +14,7 @@ async function handleSubmit(event) {
   var data = new FormData(event.target);
   var success = document.getElementById("email-success");
   var failed = document.getElementById("email-failed");
+  failed.style.display = success.style.display = "none";
   fetch(event.target.action, {
     method: form.method,
     body: data,
