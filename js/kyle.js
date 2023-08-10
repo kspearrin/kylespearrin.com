@@ -12,6 +12,8 @@ var form = document.getElementById("contact-form");
 async function handleSubmit(event) {
   event.preventDefault();
   var data = new FormData(event.target);
+  var success = document.getElementById("email-success");
+  var failed = document.getElementById("email-failed");
   fetch(event.target.action, {
     method: form.method,
     body: data,
@@ -20,19 +22,19 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      document.getElementById("email-success").style.display = "block";
+      success.style.display = "block";
       form.reset();
     } else {
       response.json().then(data => {
         if (Object.hasOwn(data, "errors")) {
-          alert(data["errors"].map(error => error["message"]).join(", "));
-        } else {
-          alert("Oops! There was a problem submitting your form.");
+          var emailErrors = document.getElementById("email-errors");
+          emailErrors.innerHTML = data["errors"].map(error => error["message"]).join(", ");
         }
+        failed.style.display = "block";
       })
     }
   }).catch(error => {
-    alert("Oops! There was a problem submitting your form.");
+    failed.style.display = "block";
   });
 }
 form.addEventListener("submit", handleSubmit);
