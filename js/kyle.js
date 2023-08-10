@@ -31,7 +31,7 @@ async function handleSubmit(event) {
           emailErrors.innerHTML = data["errors"].map(error => error["message"]).join(", ");
         }
         failed.style.display = "block";
-      })
+      });
     }
   }).catch(error => {
     failed.style.display = "block";
